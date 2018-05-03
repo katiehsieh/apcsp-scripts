@@ -1,11 +1,17 @@
 #!/bin/bash
 
+rpilist=()
+
+if [ "$1" = 0 ];
+then
+rpilist=( rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpimpw )
+
+else
 while [ "$1" != "" ]; do
-	echo $1
+	rpilist+=( $1 )
 	shift
 done
-
-rpilist=( rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpimpw )
+fi
 
 for i in "${rpilist[@]}"
 do
@@ -24,5 +30,3 @@ else
 fi
 
 done
-
-echo yay
