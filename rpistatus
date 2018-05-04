@@ -2,7 +2,7 @@
 
 rpilist=()
 
-if [ "$1" = 0 ];
+if [ "$1" = "" ];
 then
 rpilist=( rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rpi13 rpi14 rpi15 rpi16 rpi17 rpimpw )
 
